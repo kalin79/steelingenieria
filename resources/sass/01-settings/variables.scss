@@ -1,0 +1,64 @@
+// COLOR PALETTE
+$color-primary: #459dd7;
+$color-primary-dark: #253773;
+$color-primary-light: #55bcff;
+
+$color-secondary: #ffbb10;
+$color-secondary-dark: #ffbb10;
+$color-secondary-light: #334155;
+
+$color-accent: #64748b;
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-error: #ef4444;
+
+$color-bg: #f2f2f2;
+$color-bg-alt: #f1f5f9;
+$color-border: #e2e8f0;
+$color-text: #000000;
+$color-text-light: #1a1a1a;
+$color-white: #ffffff;
+$color-text2: #2d2d2d;
+
+// SPACING SCALE
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 3rem; // 48px
+$spacing-3xl: 4rem; // 64px
+
+// SIZES
+$size-sm: 640px;
+$size-md: 768px;
+$size-lg: 1024px;
+$size-xl: 1280px;
+$size-2xl: 1536px;
+
+$max-width-container: 1600px;
+
+// SHADOWS
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+// TRANSITION
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Z-INDEX
+$z-base: 1;
+$z-dropdown: 10;
+$z-sticky: 100;
+$z-fixed: 1000;
+$z-modal: 1001;
+$z-tooltip: 1002;
+
+// BORDER RADIUS
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-full: 9999px;

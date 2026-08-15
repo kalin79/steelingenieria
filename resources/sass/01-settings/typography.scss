@@ -1,0 +1,151 @@
+// FONT FAMILIES
+
+// @font-face - RedHatDisplay local
+@font-face {
+    font-family: "Red Hat Display";
+    src:
+        url("/fonts/red/RedHatDisplay-Regular.woff2") format("woff2"),
+        url("/fonts/red/RedHatDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    src:
+        url("/fonts/red/RedHatDisplay-Light.woff2") format("woff2"),
+        url("/fonts/red/RedHatDisplay-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    src:
+        url("/fonts/red/RedHatDisplay-Light.woff2") format("woff2"),
+        url("/fonts/red/RedHatDisplay-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    src:
+        url("/fonts/red/RedHatDisplay-Bold.woff2") format("woff2"),
+        url("/fonts/red/RedHatDisplay-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    src:
+        url("/fonts/red/RedHatDisplay-SemiBold.woff2") format("woff2"),
+        url("/fonts/red/RedHatDisplay-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+
+// @font-face - Archia local
+@font-face {
+    font-family: "Archia";
+    src:
+        url("/fonts/archia/Archia-Medium.woff2") format("woff2"),
+        url("/fonts/archia/Archia-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+@font-face {
+    font-family: "Archia";
+    src:
+        url("/fonts/archia/Archia-Regular.woff2") format("woff2"),
+        url("/fonts/archia/Archia-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+@font-face {
+    font-family: "Archia";
+    src:
+        url("/fonts/archia/Archia-Bold.woff2") format("woff2"),
+        url("/fonts/archia/Archia-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+
+// @font-face - Barlow local
+@font-face {
+    font-family: "Barlow";
+    src:
+        url("/fonts/barlow/Barlow-Light.woff2") format("woff2"),
+        url("/fonts/barlow/Barlow-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+@font-face {
+    font-family: "Barlow";
+    src:
+        url("/fonts/barlow/Barlow-Regular.woff2") format("woff2"),
+        url("/fonts/barlow/Barlow-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap; // ← CRÍTICO: muestra fallback mientras descarga
+}
+
+@font-face {
+    font-family: "Barlow";
+    src:
+        url("/fonts/barlow/Barlow-Bold.woff2") format("woff2"),
+        url("/fonts/barlow/Barlow-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src:
+        url("/fonts/barlow/Barlow-SemiBold.woff2") format("woff2"),
+        url("/fonts/barlow/Barlow-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap;
+}
+
+// FONT FAMILIES
+$font-red:
+    "Red Hat Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+$font-archia:
+    "Archia",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+$font-sans:
+    "Barlow",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+$font-mono: "Courier New", monospace;
+
+// FONT SIZES
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
+
+// FONT WEIGHTS
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// LINE HEIGHTS
+$line-height-tight: 1.2em;
+$line-height-base: 1.5em;
+$line-height-relaxed: 1.75em;

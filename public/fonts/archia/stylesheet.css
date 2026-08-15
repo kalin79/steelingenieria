@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Archia';
+    src: url('Archia-Light.woff2') format('woff2'),
+        url('Archia-Light.woff') format('woff'),
+        url('Archia-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archia';
+    src: url('Archia-Bold.woff2') format('woff2'),
+        url('Archia-Bold.woff') format('woff'),
+        url('Archia-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archia';
+    src: url('Archia-Medium.woff2') format('woff2'),
+        url('Archia-Medium.woff') format('woff'),
+        url('Archia-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archia';
+    src: url('Archia-Regular.woff2') format('woff2'),
+        url('Archia-Regular.woff') format('woff'),
+        url('Archia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archia';
+    src: url('Archia-SemiBold.woff2') format('woff2'),
+        url('Archia-SemiBold.woff') format('woff'),
+        url('Archia-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archia';
+    src: url('Archia-Thin.woff2') format('woff2'),
+        url('Archia-Thin.woff') format('woff'),
+        url('Archia-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

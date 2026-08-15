@@ -1,0 +1,16 @@
+// 1. VARIABLES - Primero siempre
+@import "./01-settings/variables";
+@import "./01-settings/typography";
+@import "./01-settings/spacing";
+
+// 2. TOOLS - Mixins y funciones
+@import "./02-tools/mixins";
+
+// 3. GENERIC - Reset
+@import "./03-generic/reset";
+
+// 4. UTILITIES
+@import "./04-utilities/helpers";
+
+// 5. COMPONENTES - Si hay estilos globales de componentes
+// (Pero mejor dejarlos en .vue scoped)

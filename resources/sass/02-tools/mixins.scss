@@ -1,0 +1,46 @@
+// Responsive
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "sm" {
+        @media (max-width: $size-sm) {
+            @content;
+        }
+    } @else if $breakpoint == "md" {
+        @media (max-width: $size-md) {
+            @content;
+        }
+    } @else if $breakpoint == "lg" {
+        @media (max-width: $size-lg) {
+            @content;
+        }
+    }
+}
+
+// Flexbox centering
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Grid responsivo
+@mixin grid-auto($min: 250px, $gap: $spacing-md) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+    gap: $gap;
+}
+
+// Truncate texto
+@mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Hover effect seguro
+@mixin hover-effect {
+    transition: all $transition-fast;
+
+    &:hover {
+        @content;
+    }
+}
