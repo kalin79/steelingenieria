@@ -58,7 +58,8 @@
                                 </div>
                             </div>
                             <div class="botonContainer">
-                                <Link href=""
+                                <Link
+                                    href="/soluciones/master-mover/soluciones-de-arrastre"
                                     ><span>MÁS INFORMACIÓN</span></Link
                                 >
                             </div>
@@ -98,7 +99,7 @@
                                 </div>
                             </div>
                             <div class="botonContainer">
-                                <Link href=""
+                                <Link href="/soluciones/tente/supermercados"
                                     ><span>MÁS INFORMACIÓN</span></Link
                                 >
                             </div>

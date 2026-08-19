@@ -380,8 +380,12 @@ const onSubmit = handleSubmit(
 </script>
 <style lang="scss" scoped>
 .sectionContacto {
-    background: white;
+    background-image: url("/images/bgatencion.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-bottom: 4rem;
+    padding-top: 10rem;
     @media screen and (min-width: 992px) {
         padding-bottom: 8rem;
     }
@@ -602,8 +606,9 @@ const onSubmit = handleSubmit(
             .btnEnviar {
                 border: none;
                 cursor: pointer;
-                background: var(--fc-accent);
-                color: #1f1a10;
+                background: $color-secondary;
+                color: $color-text2;
+                font-family: $font-red;
                 font-weight: 700;
                 font-size: 0.85rem;
                 letter-spacing: 0.04em;

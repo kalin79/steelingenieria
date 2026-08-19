@@ -5,7 +5,7 @@
         <ArrastradoresComponent />
         <SolucionesComponent />
         <VentajasComponent />
-        <SeparateComponent />
+        <!-- <SeparateComponent /> -->
         <ContactoComponent />
     </AppLayout>
 </template>
@@ -14,7 +14,7 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import Hero from "@/Components/Hero.vue";
 import ContactoComponent from "@/Components/Share/Contacto.vue";
 import MasterComponent from "@/Components/Share/Master.vue";
-import SeparateComponent from "@/Components/Share/Separate.vue";
+// import SeparateComponent from "@/Components/Share/Separate.vue";
 import ArrastradoresComponent from "@/Components/MasterMover/Arrastradores.vue";
 import SolucionesComponent from "@/Components/MasterMover/Soluciones.vue";
 import VentajasComponent from "@/Components/MasterMover/Ventajas.vue";

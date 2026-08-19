@@ -100,14 +100,14 @@ const options = {
                 <div class="hero__content">
                     <div class="hero__text">
                         <!-- Contenido dinámico -->
-                        <h2>{{ slide.subtitle }}</h2>
+                        <h2 v-html="slide.subtitle"></h2>
                         <h1 v-if="index === 0" v-html="slide.title"></h1>
                         <h3 v-else v-html="slide.title"></h3>
                         <p v-html="slide.description"></p>
                     </div>
 
-                    <div class="hero__actions">
-                        <Link href="" class="hero__cta"
+                    <div class="hero__actions" v-if="slide.link != ''">
+                        <Link :href="slide.link" class="hero__cta"
                             ><span>{{ slide.boton }}</span></Link
                         >
                     </div>

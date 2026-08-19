@@ -38,7 +38,7 @@
                                 <Link :href="servicio.link" class="cardBox">
                                     <div class="cardHeader">
                                         <img :src="servicio.icono" />
-                                        <h3>{{ servicio.description }}</h3>
+                                        <h3>{{ servicio.kilos }}</h3>
                                     </div>
                                     <div class="cardBody">
                                         <img :src="servicio.image" />
@@ -50,6 +50,21 @@
                                         </div>
                                         <div class="masBox">
                                             <img src="/images/mas.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="blurBox"></div>
+                                    <div class="lightBox">
+                                        <div class="titularBox">
+                                            <h3 v-html="servicio.subtitle"></h3>
+                                            <h2 v-html="servicio.title"></h2>
+                                            <p
+                                                v-html="servicio.description"
+                                            ></p>
+                                        </div>
+                                        <div class="botonBox">
+                                            <span>{{
+                                                servicio.botonTexto
+                                            }}</span>
                                         </div>
                                     </div>
                                 </Link>
@@ -72,28 +87,34 @@ const servicios = [
         id: 1,
         subtitle: "SERIE",
         title: "SmartMover",
-        description: `hasta 2,000 kg.`,
+        kilos: `hasta 2,000 kg.`,
+        description: `Mueva fácilmente carros con ruedas de hasta 2,000 kg con la gama de arrastradores SmartMover.`,
         icono: "/images/kg.svg",
         image: "/images/s11.webp",
-        link: `#`,
+        botonTexto: `VER EQUIPOS SMARTMOVER`,
+        link: `/soluciones/master-mover/smartmover`,
     },
     {
         id: 2,
         subtitle: "SERIE",
         title: "MasterTow",
-        description: `hasta 20,000 kg.`,
+        kilos: `hasta 20,000 kg.`,
+        description: `La gama MasterTow de potentes y fáciles de usar arrastradores eléctricos es ideal para cargas y carros de hasta 20.000 kg.`,
         icono: "/images/kg.svg",
         image: "/images/s12.webp",
-        link: `#`,
+        botonTexto: `VER EQUIPOS SMARTMOVER`,
+        link: `/soluciones/master-mover/mastertow`,
     },
     {
         id: 3,
         subtitle: "SERIE",
         title: "MasterTug",
-        description: `hasta 20,000 kg.`,
+        kilos: `hasta 20,000 kg.`,
+        description: `La gama MasterTug ofrece una maniobrabilidad inigualable a la hora de mover cargas pesadas con ruedas de hasta 20.000 kg.`,
         icono: "/images/kg.svg",
         image: "/images/s13.webp",
-        link: `#`,
+        botonTexto: `VER EQUIPOS SMARTMOVER`,
+        link: `/soluciones/master-mover/mastertug`,
     },
 ];
 // Opciones de Splide (fácil de entender)
@@ -131,6 +152,130 @@ const onMounted = () => {
         border-radius: 30px;
         padding: 0 0 3rem 0;
         overflow: hidden;
+        position: relative;
+        .blurBox {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // background: rgba(255, 255, 255, 0.25); // semi-transparente
+            -webkit-backdrop-filter: blur(12px); // para Safari
+            backdrop-filter: blur(12px); // desenfoca lo de detrás
+            z-index: 9;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .lightBox {
+            position: absolute;
+            bottom: 0;
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            left: 0;
+            z-index: 10;
+            padding: 0.5rem 2rem 3rem;
+            .botonBox {
+                width: 200px;
+                height: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 30px;
+                background: $color-secondary;
+                margin-top: 2rem;
+                opacity: 0;
+                transform: translateX(-40px); // entra de izquierda a derecha
+                transition:
+                    opacity 0.4s ease 0.55s,
+                    transform 0.4s ease 0.55s;
+                @media screen and (min-width: 992px) {
+                    width: 250px;
+                    height: 50px;
+                }
+                @media screen and (min-width: 1200px) {
+                    width: 264px;
+                    height: 60px;
+                }
+                span {
+                    font-family: $font-red;
+                    font-weight: bold;
+                    font-size: 0.7rem;
+                    line-height: 1.5em;
+                    color: $color-text2;
+                    @media screen and (min-width: 992px) {
+                        font-size: 0.85rem;
+                        line-height: 1.5em;
+                    }
+                    @media screen and (min-width: 1200px) {
+                        font-size: 0.875rem;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+            .titularBox {
+                h3,
+                h2 {
+                    opacity: 1; // se ven juntos desde el principio
+                    transform: translateY(0);
+                }
+                p {
+                    opacity: 0;
+                    transform: translateY(15px);
+                    transition:
+                        opacity 0.35s ease 0.35s,
+                        // aparece después de que sube
+                        transform 0.35s ease 0.35s;
+                }
+                p {
+                    font-size: 1.125rem;
+                    line-height: 1.15em;
+                    color: white;
+                    font-family: $font-sans;
+                    font-weight: 400;
+                    @media screen and (min-width: 992px) {
+                        font-size: 1.125rem;
+                        line-height: 1.5em;
+                    }
+                    @media screen and (min-width: 1200px) {
+                        font-size: 1.125rem;
+                        line-height: 1.5em;
+                    }
+                }
+                h3 {
+                    font-size: 1rem;
+                    line-height: 1.5em;
+                    color: $color-secondary;
+                    font-family: $font-sans;
+                    font-weight: 500;
+                    letter-spacing: 0.05em;
+                    @media screen and (min-width: 992px) {
+                        font-size: 1.1rem;
+                        line-height: 1.4em;
+                    }
+                    @media screen and (min-width: 1200px) {
+                        font-size: 1.125rem;
+                        line-height: 1.5em;
+                    }
+                }
+                h2 {
+                    font-size: 1.25rem;
+                    line-height: 1.15em;
+                    color: white;
+                    font-family: $font-sans;
+                    font-weight: 400;
+                    @media screen and (min-width: 992px) {
+                        font-size: 1.475rem;
+                        line-height: 1.35em;
+                    }
+                    @media screen and (min-width: 1200px) {
+                        font-size: 1.875rem;
+                        line-height: 1.25em;
+                    }
+                }
+            }
+        }
         .cardFooter {
             padding: 0.5rem 2rem;
             display: flex;
@@ -206,6 +351,24 @@ const onMounted = () => {
                 object-fit: contain;
                 width: auto;
                 height: auto;
+            }
+        }
+        &:hover {
+            .blurBox {
+                opacity: 1;
+            }
+            .lightBox {
+                transform: translateY(0);
+
+                .titularBox p {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                .botonBox {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
             }
         }
     }

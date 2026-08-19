@@ -73,19 +73,22 @@ import gsap from "gsap";
 const items = [
     {
         title: "¿Cómo funcionan?",
-        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.`,
+        content: `Al conectarse de forma segura a la carga con ruedas, los remolcadores eléctricos suelen ser operados por peatones, pero también pueden ser controlados de forma remota, lo que permite al operador alejarse para obtener una mejor visibilidad.`,
     },
     {
-        title: "¿Cómo se alimentan?",
-        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.`,
+        title: "¿Qué industrias utilizan remolcadores eléctricos?",
+        content: `Una amplia gama de industrias utiliza nuestros remolcadores eléctricos para mejorar la seguridad en el trabajo e impulsar la eficiencia. Desde el movimiento de contenedores de residuos en la gestión de instalaciones hasta el traslado de motores aeronáuticos en mantenimiento, nuestras soluciones de remolque se utilizan de forma fiable una y otra vez.
+Muchos de nuestros clientes operan en entornos de fabricación industrial como construcción, minería, equipos agrícolas, fabricación farmacéutica, energía, automoción y aeroespacial.`,
     },
     {
         title: "¿Qué tipos están disponibles?",
-        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.`,
+        content: `MasterMover cuenta con una amplia gama de máquinas diseñadas para mejorar la manipulación de cargas pesadas con ruedas.
+La gama SmartMover es la solución ideal de manipulación manual para mover cargas de hasta 2.000 kg. Con un diseño compacto y una variedad de opciones de acoplamiento seguras, la gama SmartMover se utiliza a menudo para mecanizar el movimiento de cargas que antes se manipulaban manualmente, reduciendo el riesgo de lesiones.
+Para cargas de hasta 20.000 kg, nuestras gamas MasterTug y MasterTow ofrecen un rendimiento potente y permiten que un solo operario mueva fácilmente cargas sobre ruedas o raíles.`,
     },
     {
         title: "¿Cómo se conectan a una carga?",
-        content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.`,
+        content: `Es importante considerar cómo los remolcadores eléctricos se conectarán a su carga; los sistemas de acoplamiento garantizan una conexión segura y ayudan a determinar la maniobrabilidad y la tracción. Nuestros expertos en producto le ayudarán a especificar el acoplamiento adecuado para su aplicación.`,
     },
 ];
 const openIndex = ref(null);

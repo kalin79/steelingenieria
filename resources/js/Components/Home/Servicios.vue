@@ -26,7 +26,7 @@
                                 :key="index"
                                 class="carrusel__slide"
                             >
-                                <div class="cardBox">
+                                <Link :href="servicio.link" class="cardBox">
                                     <div class="cardHeader">
                                         <img :src="servicio.image" />
                                     </div>
@@ -34,7 +34,7 @@
                                         <h3 v-html="servicio.title"></h3>
                                         <p v-html="servicio.description"></p>
                                     </div>
-                                </div>
+                                </Link>
                             </SplideSlide>
                         </Splide>
                     </div>
@@ -55,21 +55,21 @@ const servicios = [
         title: "Fabricaciones",
         description: `Fabricación de piezas y estructuras metálicas con precisión, calidad y control en cada etapa del proceso.`,
         image: "/images/ss1.webp",
-        link: `#`,
+        link: `/servicios/fabricacion-metalmecanica`,
     },
     {
         id: 2,
         title: "Montaje y mantenimiento <br />metálico",
         description: `Montaje especializado de equipos, estructuras y sistemas bajo estándares industriales.`,
         image: "/images/ss2.webp",
-        link: `#`,
+        link: `/servicios/montaje-y-mantenimiento-metalico`,
     },
     {
         id: 3,
         title: "Ingeniería y diseño",
         description: `Diseñamos soluciones industriales eficientes mediante ingeniería especializada y desarrollo técnico.`,
         image: "/images/ss3.webp",
-        link: `#`,
+        link: `/servicios/ingenieria-y-diseno`,
     },
 ];
 // Opciones de Splide (fácil de entender)

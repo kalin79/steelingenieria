@@ -133,14 +133,17 @@ const columnas = [
     {
         titulo: "Servicios de Ingeniería",
         items: [
-            { label: "Fabricaciones", href: "/servicios/fabricaciones" },
+            {
+                label: "Fabricaciones",
+                href: "/servicios/fabricacion-metalmecanica",
+            },
             {
                 label: "Montaje y Mantenimiento Metálico",
-                href: "/servicios/montaje-mantenimiento",
+                href: "/servicios/montaje-y-mantenimiento-metalico",
             },
             {
                 label: "Ingeniería y Diseño",
-                href: "/servicios/ingenieria-diseno",
+                href: "/servicios/ingenieria-y-diseno",
             },
         ],
     },
@@ -149,9 +152,9 @@ const columnas = [
         items: [
             {
                 label: "Arrastradores Eléctricos MASTERMOVER",
-                href: "/soluciones/mastermover",
+                href: "/soluciones/master-mover/soluciones-de-arrastre",
             },
-            { label: "Ruedas TENTE", href: "/soluciones/tente" },
+            { label: "Ruedas TENTE", href: "/soluciones/tente/supermercados" },
         ],
     },
 ];
