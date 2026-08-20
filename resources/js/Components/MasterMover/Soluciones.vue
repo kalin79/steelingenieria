@@ -144,7 +144,10 @@ const onMounted = () => {
 .carruselSoluciones {
     width: 100%;
     min-width: 0;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    @media screen and (min-width: 992px) {
+        margin-top: 5rem;
+    }
     .cardBox {
         flex: 1;
         // border: 1px solid blue;
@@ -389,8 +392,11 @@ const onMounted = () => {
 </style>
 <style lang="scss" scoped>
 .solucionesSection {
-    padding: 5rem 0;
+    padding: 3rem 0;
     background: white;
+    @media screen and (min-width: 992px) {
+        padding: 5rem 0;
+    }
     .headerContainer {
         .layoutContainer {
             display: grid;
@@ -398,7 +404,10 @@ const onMounted = () => {
             gap: 1rem;
             > div {
                 &:nth-of-type(1) {
-                    grid-column: 1 / span 6;
+                    grid-column: 1 / -1;
+                    @media screen and (min-width: 992px) {
+                        grid-column: 1 / span 6;
+                    }
                     h2 {
                         font-size: 2rem;
                         line-height: 1em;
@@ -423,20 +432,24 @@ const onMounted = () => {
                     }
                 }
                 &:nth-of-type(2) {
-                    grid-column: 7 / -1;
+                    grid-column: 1 / -1;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
+                    @media screen and (min-width: 992px) {
+                        grid-column: 7 / -1;
+                    }
                     p {
                         font-size: 1rem;
                         line-height: 1.5em;
                         color: #000;
                         font-family: $font-sans;
                         font-weight: 400;
-                        margin: 1rem 0 0.5rem;
+                        margin: 0rem 0 0.5rem;
                         @media screen and (min-width: 992px) {
                             font-size: 1rem;
                             line-height: 1.5em;
+                            margin: 1rem 0 0.5rem;
                         }
                         @media screen and (min-width: 1200px) {
                             font-size: 1.125rem;

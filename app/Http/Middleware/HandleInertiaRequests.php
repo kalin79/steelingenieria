@@ -38,6 +38,14 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
+
+            // Se evalua en cada request para que el mensaje de una
+            // sesion no quede pegado en la siguiente navegacion.
+            'flash' => fn () => [
+                'success' => $request->session()->get('success'),
+                'error' => $request->session()->get('error'),
+            ],
+
             'layout' => fn () => app(LayoutService::class)->payload(),
         ];
     }

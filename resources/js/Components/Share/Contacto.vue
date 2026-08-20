@@ -26,6 +26,17 @@
                             novalidate
                             @submit="onSubmit"
                         >
+                            <!-- Trampa para bots. No es un campo real: si viene lleno, se rechaza. -->
+                            <div class="honeypot" aria-hidden="true">
+                                <label for="website">No completar</label>
+                                <input
+                                    id="website"
+                                    v-model="website"
+                                    type="text"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                />
+                            </div>
                             <div class="formGrid">
                                 <!-- Nombres -->
                                 <div class="field">
@@ -305,6 +316,7 @@ import { contactoSchema, SOLUCIONES } from "./contactoSchema";
 
 const page = usePage();
 const errorGeneral = ref(null);
+const website = ref("");
 
 // Mensaje de éxito desde el flash de Laravel: return back()->with('success', '...')
 const flashSuccess = computed(() => page.props.flash?.success ?? null);
@@ -353,22 +365,26 @@ const onSubmit = handleSubmit(
          * Envolverlo y resolver en onFinish mantiene el estado correcto.
          */
         return new Promise((resolve) => {
-            router.post("/contacto", values, {
-                preserveScroll: true,
-                // Solo refresca las props que necesitas (flash), no toda la página
-                only: ["flash", "errors"],
-                onSuccess: () => {
-                    resetForm();
+            router.post(
+                "/contacto",
+                { ...values, website: website.value },
+                {
+                    preserveScroll: true,
+                    // Solo refresca las props que necesitas (flash), no toda la página
+                    only: ["flash", "errors"],
+                    onSuccess: () => {
+                        resetForm();
+                    },
+                    onError: (backendErrors) => {
+                        // Las keys de Laravel coinciden con los nombres de campo,
+                        // así que se pintan directo en el input correspondiente.
+                        setErrors(backendErrors);
+                        const first = Object.keys(backendErrors)[0];
+                        document.getElementById(first)?.focus();
+                    },
+                    onFinish: () => resolve(),
                 },
-                onError: (backendErrors) => {
-                    // Las keys de Laravel coinciden con los nombres de campo,
-                    // así que se pintan directo en el input correspondiente.
-                    setErrors(backendErrors);
-                    const first = Object.keys(backendErrors)[0];
-                    document.getElementById(first)?.focus();
-                },
-                onFinish: () => resolve(),
-            });
+            );
         });
     },
     // Falla la validación de cliente: foco al primer campo inválido.
@@ -379,15 +395,23 @@ const onSubmit = handleSubmit(
 );
 </script>
 <style lang="scss" scoped>
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 .sectionContacto {
     background-image: url("/images/bgatencion.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 4rem;
-    padding-top: 10rem;
+    padding-top: 0rem;
     @media screen and (min-width: 992px) {
         padding-bottom: 8rem;
+        padding-top: 8rem;
     }
     .boxForm {
         position: relative;

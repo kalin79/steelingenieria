@@ -90,7 +90,7 @@ import { Link } from "@inertiajs/vue3";
 const anio = new Date().getFullYear();
 
 const telefono = "(01) 469 8186";
-const email = "ventas@steelingenieria.com";
+const email = "ventas@steelingenieria.com.pe";
 
 // Paths SVG inline: sin dependencia de librería de iconos ni requests extra.
 const ICONOS = {

@@ -51,21 +51,29 @@ defineProps({
         margin-top: 1.5rem;
         > div {
             &:nth-of-type(1) {
-                grid-column: 1 / span 9;
+                grid-column: 1 / -1;
                 display: grid;
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: 1rem;
                 @media screen and (min-width: 992px) {
                     grid-template-columns: repeat(3, minmax(0, 1fr));
+                    grid-column: 1 / span 9;
                 }
                 .cardServicio {
                     border: 1px solid #cdcdcd;
-                    padding: 1rem 1.5rem;
+                    padding: 1rem 0.5rem;
                     border-radius: 20px;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
+                    flex-direction: column;
                     gap: 0.5rem;
+                    @media screen and (min-width: 992px) {
+                        padding: 1rem 1.5rem;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
                     .iconCard {
                         flex: 0 0 50px;
                         img {
@@ -78,14 +86,15 @@ defineProps({
                         flex: 1;
                         color: $color-text-light;
                         font-size: 0.9rem;
-                        line-height: 1.5em;
+                        line-height: 1.25em;
                         font-family: $font-sans;
                         font-weight: 500;
                         margin: 1rem 0 0.5rem;
-
+                        text-align: center;
                         @media screen and (min-width: 992px) {
                             font-size: 0.9rem;
                             line-height: 1.5em;
+                            text-align: left;
                         }
 
                         @media screen and (min-width: 1200px) {
@@ -113,11 +122,15 @@ defineProps({
                     position: absolute;
                     top: 0;
                     left: 0;
+                    opacity: 0;
+                    @media screen and (min-width: 992px) {
+                        opacity: 1;
+                    }
                 }
             }
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             line-height: 1.25em;
             color: $color-text-light;
             font-family: $font-archia;
@@ -125,7 +138,7 @@ defineProps({
             margin: 1rem 0 0.5rem;
 
             @media screen and (min-width: 992px) {
-                font-size: 1.65rem;
+                font-size: 1.825rem;
                 line-height: 1.25em;
             }
 

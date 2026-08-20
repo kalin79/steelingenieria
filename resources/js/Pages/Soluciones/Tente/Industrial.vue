@@ -5,7 +5,7 @@
         <DescripcionComponent :dataDescripcion="serviciosDescripcionData" />
         <LineasComponent :lineas="Lineas" />
         <!-- <GaleriaComponent :galerias="Galerias" /> -->
-        <SeparateComponent />
+        <!-- <SeparateComponent /> -->
         <ContactoComponent />
     </AppLayout>
 </template>

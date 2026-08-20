@@ -176,8 +176,8 @@ const options = {
         h3 {
             font-family: $font-archia;
             font-weight: 500;
-            font-size: 3rem;
-            line-height: 1em;
+            font-size: 2rem;
+            line-height: 1.15em;
             color: white;
             margin: 1rem 0;
             @media screen and (min-width: 992px) {

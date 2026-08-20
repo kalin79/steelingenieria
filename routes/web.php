@@ -4,13 +4,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Pages\MasterMoverController;
 use App\Http\Controllers\Pages\TenteController;
+use App\Http\Controllers\ContactoController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 
-
+Route::post('/contacto', [ContactoController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('contacto.store');
 
 
 Route::prefix('soluciones')->name('solutions.')->group(function () {

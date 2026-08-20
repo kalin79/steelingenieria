@@ -15,6 +15,7 @@
                         operación, eliminan la manipulación manual, protegen a
                         los operadores y mejoran la eficiencia operativa.
                     </p>
+                    <div class="bgM"></div>
                     <div class="accordionContainer">
                         <div class="accordion">
                             <div
@@ -149,6 +150,22 @@ const closeItem = (index) => {
         left: 0;
         width: 45%;
         height: 100%;
+        display: none;
+        @media screen and (min-width: 992px) {
+            display: block;
+        }
+    }
+    .bgM {
+        background-image: url("/images/f3.webp");
+        background-position: 0 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 360px;
+        overflow: hidden;
+        border-radius: 30px;
+        width: 100%;
+        margin: 3rem 0 0.5rem;
     }
     .container {
         position: relative;
@@ -157,9 +174,15 @@ const closeItem = (index) => {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 1rem;
-            padding: 5rem 0;
+            padding: 5rem 0 3rem;
+            @media screen and (min-width: 992px) {
+                padding: 5rem 0 5rem;
+            }
             > div {
-                grid-column: 7 / -1;
+                grid-column: 1 / -1;
+                @media screen and (min-width: 992px) {
+                    grid-column: 7 / -1;
+                }
                 .accordion {
                     width: 100%;
                     border: 0px solid $color-border;

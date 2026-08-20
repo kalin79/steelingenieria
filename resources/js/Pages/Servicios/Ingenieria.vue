@@ -29,7 +29,7 @@ const banners = [
     {
         id: 1,
         image: "/images/serBan3.png",
-        imageM: "/images/serBan3.png",
+        imageM: "/images/serBan3M.png",
         title: `Ingeniería y Diseño`,
         subtitle: `Transformamos ideas en soluciones industriales <br />de alto rendimiento.`,
         description: ``,

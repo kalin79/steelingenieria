@@ -29,7 +29,7 @@ const banners = [
     {
         id: 1,
         image: "/images/serBan2.png",
-        imageM: "/images/serBan2.png",
+        imageM: "/images/serBan2M.png",
         title: `Fabricación <br />Metalmecánica`,
         subtitle: `Fabricación industrial con ingeniería de precisión`,
         description: ``,

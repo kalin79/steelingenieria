@@ -40,17 +40,21 @@ const props = defineProps({
 </script>
 <style lang="scss" scoped>
 .caracteristicaSection {
-    padding: 5rem 0;
+    padding: 5rem 0 3rem;
     background-image: url("/images/f2.webp");
     background-position: top right;
     background-size: cover;
     background-repeat: repeat;
+    @media screen and (min-width: 992px) {
+        padding: 5rem 0;
+    }
     .bodyContainer {
-        margin-top: 3rem;
+        margin-top: 2rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
         @media screen and (min-width: 992px) {
+            margin-top: 3rem;
             grid-template-columns: repeat(4, 1fr);
         }
         .cardBox {
@@ -58,6 +62,17 @@ const props = defineProps({
             justify-content: flex-start;
             align-items: center;
             gap: 0.5rem;
+            border-bottom: 1px solid #bababa;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            &:last-child {
+                border-bottom: 0px solid #bababa;
+            }
+            @media screen and (min-width: 992px) {
+                border-bottom: 0px solid #bababa;
+                padding-bottom: 0rem;
+                margin-bottom: 0rem;
+            }
             p {
                 font-size: 0.95rem;
                 line-height: 1.15em;
@@ -88,9 +103,12 @@ const props = defineProps({
     }
     .headerContainer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
+        @media screen and (min-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
         > div {
             &:nth-of-type(2) {
                 display: flex;
@@ -98,28 +116,27 @@ const props = defineProps({
                 align-items: flex-start;
                 justify-content: flex-end;
                 .descripcionBox {
-                    p {
+                    font-size: 1.12rem;
+                    line-height: 1.5em;
+                    color: $color-text-light;
+                    font-family: $font-sans;
+                    font-weight: 400;
+                    margin: 0rem 0 0.5rem;
+                    @media screen and (min-width: 992px) {
                         font-size: 1rem;
                         line-height: 1.5em;
-                        color: $color-text-light;
-                        font-family: $font-sans;
-                        font-weight: 400;
                         margin: 1rem 0 0.5rem;
-                        @media screen and (min-width: 992px) {
-                            font-size: 1rem;
-                            line-height: 1.5em;
-                        }
-                        @media screen and (min-width: 1200px) {
-                            font-size: 1.125rem;
-                            line-height: 1.4em;
-                        }
+                    }
+                    @media screen and (min-width: 1200px) {
+                        font-size: 1.125rem;
+                        line-height: 1.4em;
                     }
                 }
             }
             &:nth-of-type(1) {
                 h2 {
-                    font-size: 1.5rem;
-                    line-height: 1.15em;
+                    font-size: 1.75rem;
+                    line-height: 1.35em;
                     color: $color-text-light;
                     font-family: $font-sans;
                     font-weight: 400;
@@ -131,6 +148,12 @@ const props = defineProps({
                     @media screen and (min-width: 1200px) {
                         font-size: 1.875rem;
                         line-height: 1em;
+                    }
+                    :deep(br) {
+                        display: none;
+                        @media screen and (min-width: 992px) {
+                            display: block;
+                        }
                     }
                 }
                 .etiquetaBox {

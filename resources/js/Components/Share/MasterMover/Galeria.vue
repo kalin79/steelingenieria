@@ -48,8 +48,14 @@ const props = defineProps({
 .galeriaSection {
     padding: 2rem 0 2rem;
     background: #fff;
+    @media screen and (min-width: 992px) {
+        padding: 2rem 0 8rem;
+    }
     .bodyContainer {
-        margin-top: 2rem;
+        margin-top: 0rem;
+        @media screen and (min-width: 992px) {
+            margin-top: 2rem;
+        }
         .galeria {
             &__titulo {
                 font-family: $font-red;
@@ -113,7 +119,6 @@ const props = defineProps({
                     transform: none;
                 }
             }
-
             @include respond-to("md") {
                 padding: $spacing-xl $spacing-md;
 
@@ -123,7 +128,7 @@ const props = defineProps({
                 }
 
                 &__grid {
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: repeat(1, 1fr);
                     grid-template-rows: none;
                     aspect-ratio: auto;
                 }
@@ -142,13 +147,16 @@ const props = defineProps({
     }
     .headerContainer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
+        @media screen and (min-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
         > div {
             &:nth-of-type(1) {
                 h2 {
-                    font-size: 1.5rem;
+                    font-size: 1.75rem;
                     line-height: 1.15em;
                     color: #000;
                     font-family: $font-archia;

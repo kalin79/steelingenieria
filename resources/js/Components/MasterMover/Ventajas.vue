@@ -66,10 +66,13 @@ const ventajas = [
     background-position: 0 0;
     background-size: cover;
     background-repeat: repeat;
-    padding: 8rem 0 10rem;
+    padding: 5rem 0 6rem;
+    @media screen and (min-width: 992px) {
+        padding: 8rem 0 10rem;
+    }
     .bodyContainer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 3rem;
         width: 100%;
         margin-top: 5rem;
@@ -78,26 +81,33 @@ const ventajas = [
         }
         .cardContainer {
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
             gap: 1rem;
             flex-direction: column;
-
             @media screen and (min-width: 992px) {
                 flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
             }
             .infoBox {
                 flex: 1;
+                padding: 0 2rem;
+                @media screen and (min-width: 992px) {
+                    padding: 0;
+                }
                 h3 {
-                    font-size: 0.95rem;
+                    font-size: 1.25rem;
                     line-height: 1.5em;
                     color: $color-primary-light;
                     font-family: $font-sans;
                     font-weight: 400;
+                    text-align: center;
                     @media screen and (min-width: 992px) {
                         font-size: 1rem;
                         line-height: 1.5em;
+                        text-align: left;
                     }
                     @media screen and (min-width: 1200px) {
                         font-size: 1.25rem;
@@ -105,14 +115,16 @@ const ventajas = [
                     }
                 }
                 p {
-                    font-size: 0.85rem;
+                    font-size: 1rem;
                     line-height: 1.5em;
                     color: white;
                     font-family: $font-sans;
                     font-weight: 400;
+                    text-align: center;
                     @media screen and (min-width: 992px) {
                         font-size: 0.9rem;
                         line-height: 1.5em;
+                        text-align: left;
                     }
                     @media screen and (min-width: 1200px) {
                         font-size: 1rem;
@@ -133,7 +145,7 @@ const ventajas = [
     .headerContainer {
         h2 {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
             line-height: 1.25em;
             color: white;
             font-family: $font-archia;

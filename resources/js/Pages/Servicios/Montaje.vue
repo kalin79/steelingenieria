@@ -29,7 +29,7 @@ const banners = [
     {
         id: 1,
         image: "/images/serBan1.png",
-        imageM: "/images/serBan1.png",
+        imageM: "/images/serBan1M.png",
         title: "Montajes y Mantenimiento <br />Metálico",
         subtitle:
             "Instalamos, mantenemos y optimizamos estructuras <br />que impulsan tu operación",

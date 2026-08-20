@@ -52,10 +52,13 @@ const props = defineProps({
 </script>
 <style lang="scss" scoped>
 .lineasSection {
-    padding: 5rem 0 2rem;
+    padding: 3rem 0 5rem;
     background: #fff;
+    @media screen and (min-width: 992px) {
+        padding: 5rem 0 8rem;
+    }
     .bodyContainer {
-        margin-top: 5rem;
+        margin-top: 2.5rem;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
@@ -64,6 +67,7 @@ const props = defineProps({
         }
 
         @media screen and (min-width: 992px) {
+            margin-top: 5rem;
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -183,9 +187,12 @@ const props = defineProps({
     }
     .headerContainer {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
+        @media screen and (min-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
         > div {
             &:nth-of-type(2) {
                 display: flex;
@@ -193,27 +200,26 @@ const props = defineProps({
                 align-items: flex-start;
                 justify-content: flex-end;
                 .descripcionBox {
-                    p {
+                    font-size: 1.13rem;
+                    line-height: 1.5em;
+                    color: $color-text-light;
+                    font-family: $font-sans;
+                    font-weight: 400;
+                    margin: 0rem 0 0.5rem;
+                    @media screen and (min-width: 992px) {
                         font-size: 1rem;
                         line-height: 1.5em;
-                        color: $color-text-light;
-                        font-family: $font-sans;
-                        font-weight: 400;
                         margin: 1rem 0 0.5rem;
-                        @media screen and (min-width: 992px) {
-                            font-size: 1rem;
-                            line-height: 1.5em;
-                        }
-                        @media screen and (min-width: 1200px) {
-                            font-size: 1.125rem;
-                            line-height: 1.4em;
-                        }
+                    }
+                    @media screen and (min-width: 1200px) {
+                        font-size: 1.125rem;
+                        line-height: 1.4em;
                     }
                 }
             }
             &:nth-of-type(1) {
                 h2 {
-                    font-size: 1.5rem;
+                    font-size: 1.75rem;
                     line-height: 1.15em;
                     color: #000;
                     font-family: $font-archia;

@@ -5,7 +5,7 @@
         <CaracteristicasComponent :caracteristicas="caracteristicas" />
         <LineasComponent :lineas="Lineas" />
         <GaleriaComponent :galerias="Galerias" />
-        <SeparateComponent />
+        <!-- <SeparateComponent /> -->
         <ContactoComponent />
     </AppLayout>
 </template>
@@ -22,10 +22,10 @@ const banners = [
     {
         id: 1,
         image: "/images/bs1.webp",
-        imageM: "/images/bs1.webp",
+        imageM: "/images/bs1M.png",
         icono: "/images/kg.svg",
         kilos: `hasta 2,000 kg.`,
-        title: "smartMover",
+        title: "SmartMover",
         subtitle: "",
         description: `Remolcadores eléctricos pequeños pero potentes para <br />eliminar la manipulación manual.`,
         boton: ``,

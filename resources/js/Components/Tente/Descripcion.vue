@@ -25,6 +25,15 @@
                     ></div>
                 </div>
             </div>
+            <div class="bgM">
+                <img
+                    :src="`/images/${dataDescripcion.imagen}`"
+                    :alt="dataDescripcion.imagenAlt || ''"
+                    :loading="prioridad ? 'eager' : 'lazy'"
+                    :fetchpriority="prioridad ? 'high' : 'auto'"
+                    decoding="async"
+                />
+            </div>
         </div>
     </section>
 </template>
@@ -49,7 +58,10 @@ defineProps({
     background-size: contain;
     background-repeat: repeat;
     position: relative;
-
+    padding-bottom: 3rem;
+    @media screen and (min-width: 992px) {
+        padding-bottom: 0rem;
+    }
     .bg {
         position: absolute;
         top: 0;
@@ -57,7 +69,10 @@ defineProps({
         width: 100%;
         height: 100%;
         overflow: hidden;
-
+        display: none;
+        @media screen and (min-width: 992px) {
+            display: block;
+        }
         img {
             display: block;
             width: 100%;
@@ -81,6 +96,25 @@ defineProps({
             &::after {
                 display: none;
             }
+        }
+    }
+
+    .bgM {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 370px;
+        overflow: hidden;
+        border-radius: 30px;
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
 

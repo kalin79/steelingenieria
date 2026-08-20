@@ -181,7 +181,7 @@ const onMounted = () => {
             }
         }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             line-height: 1.25em;
             color: $color-text-light;
             font-family: $font-archia;
@@ -189,7 +189,7 @@ const onMounted = () => {
             margin: 1rem 0 0.5rem;
 
             @media screen and (min-width: 992px) {
-                font-size: 1.65rem;
+                font-size: 1.825rem;
                 line-height: 1.25em;
             }
 

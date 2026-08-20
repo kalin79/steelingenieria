@@ -22,7 +22,7 @@ const banners = [
     {
         id: 1,
         image: "/images/master.webp",
-        imageM: "/images/master.webp",
+        imageM: "/images/masterM.png",
         title: "Soluciones de remolque <br />con MasterMover",
         subtitle: "Mueve cargas pesadas de forma fácil",
         description: `Diseño, fabricación y montaje de proyectos industriales para <br />los sectores minero, logístico, manufacturero y alimentario.`,

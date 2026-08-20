@@ -5,7 +5,7 @@
         <CaracteristicasComponent :caracteristicas="caracteristicas" />
         <LineasComponent :lineas="Lineas" />
         <GaleriaComponent :galerias="Galerias" />
-        <SeparateComponent />
+        <!-- <SeparateComponent /> -->
         <ContactoComponent />
     </AppLayout>
 </template>
@@ -22,7 +22,7 @@ const banners = [
     {
         id: 1,
         image: "/images/bs3.png",
-        imageM: "/images/bs3.png",
+        imageM: "/images/bs3M.png",
         icono: "/images/kg.svg",
         kilos: `hasta 20,000 kg.`,
         title: "MasterTug",

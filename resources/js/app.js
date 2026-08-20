@@ -6,7 +6,7 @@ import "../sass/app.scss"; // Importa SASS aquí
 const appName = import.meta.env.VITE_APP_NAME || "App";
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    // title: (title) => `${title} - ${appName}`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,
