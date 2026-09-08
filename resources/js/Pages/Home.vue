@@ -5,7 +5,7 @@
         <SomosSection />
         <ServiciosSection />
         <SociosSection />
-        <ProyectosSection />
+        <ProyectosSection :proyectos="proyectos" />
         <ContactoComponent />
     </AppLayout>
 </template>
@@ -19,6 +19,12 @@ import ServiciosSection from "@/Components/Home/Servicios.vue";
 import SociosSection from "@/Components/Home/Socios.vue";
 import ProyectosSection from "@/Components/Home/Proyectos.vue";
 import ContactoComponent from "@/Components/Share/Contacto.vue";
+
+// Los proyectos llegan del controlador: Project::ultimos(5).
+defineProps({
+    proyectos: { type: Array, default: () => [] },
+});
+
 // Recibir props del controller
 // defineProps({
 //     banners: {

@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Pages\MasterMoverController;
 use App\Http\Controllers\Pages\TenteController;
 use App\Http\Controllers\Pages\ContactenosController;
+use App\Http\Controllers\Pages\ProyectoController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\ContactoTenteController;
 
@@ -12,6 +13,12 @@ use App\Http\Controllers\ContactoTenteController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/contactenos', [ContactenosController::class, 'index'])->name('contactenos');
+
+// Listado y ficha de proyectos. El detalle va en singular por pedido y
+// resuelve por slug: Project::getRouteKeyName() devuelve 'slug', asi que
+// no hace falta escribir {project:slug} aca.
+Route::get('/proyectos', [ProyectoController::class, 'index'])->name('proyectos.index');
+Route::get('/proyecto/{project}', [ProyectoController::class, 'show'])->name('proyectos.show');
 
 
 

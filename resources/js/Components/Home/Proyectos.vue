@@ -1,5 +1,5 @@
 <template>
-    <section class="sectionProyectos">
+    <section v-if="proyectos.length" class="sectionProyectos">
         <!-- <div class="bgSocio"></div> -->
         <div class="container">
             <div class="layoutContainer">
@@ -33,24 +33,47 @@
                             @splide:mounted="onMounted"
                         >
                             <SplideSlide
-                                v-for="(proyecto, index) in proyectos"
-                                :key="index"
+                                v-for="proyecto in proyectos"
+                                :key="proyecto.id"
                                 class="carrusel__slide"
                             >
-                                <div class="cardProyect">
+                                <Link :href="proyecto.url" class="cardProyect">
                                     <div class="cardHeader">
-                                        <img :src="proyecto.image" />
+                                        <!--
+                                            Dos archivos distintos, no el
+                                            mismo escalado: el navegador
+                                            descarga solo el que va a
+                                            mostrar segun el ancho.
+                                        -->
+                                        <picture v-if="proyecto.imageDesktop">
+                                            <source
+                                                v-if="proyecto.imageMobile"
+                                                media="(max-width: 640px)"
+                                                :srcset="proyecto.imageMobile.url"
+                                            />
+                                            <img
+                                                :src="proyecto.imageDesktop.url"
+                                                :alt="
+                                                    proyecto.imageDesktop.alt ||
+                                                    proyecto.title
+                                                "
+                                                loading="lazy"
+                                                decoding="async"
+                                            />
+                                        </picture>
                                     </div>
                                     <div class="cardBody">
-                                        <h3>{{ proyecto.sector }}</h3>
-                                        <h2 v-html="proyecto.title"></h2>
+                                        <h3 v-if="etiqueta(proyecto)">
+                                            {{ etiqueta(proyecto) }}
+                                        </h3>
+                                        <h2>{{ proyecto.title }}</h2>
                                     </div>
-                                </div>
+                                </Link>
                             </SplideSlide>
                         </Splide>
                     </div>
                     <div class="botonContainer">
-                        <Link href="">
+                        <Link href="/proyectos">
                             <span>VER TODOS LOS PROYECTOS</span>
                         </Link>
                     </div>
@@ -84,26 +107,25 @@ const options = {
         640: { perPage: 1, gap: "1rem" },
     },
 };
-const proyectos = [
-    {
-        id: 1,
-        sector: "Sector Minero",
-        title: "Equipo volteador de Block CAT con sistema eléctrico",
-        image: "/images/sector1.webp",
-    },
-    {
-        id: 2,
-        sector: "Sector Industrial",
-        title: "Soporte para montaje y desmontaje de Wheel Motor",
-        image: "/images/sector2.webp",
-    },
-    {
-        id: 3,
-        sector: "Sector Minero",
-        title: "Base metálica para conjunto de rueda delantero camión CAT",
-        image: "/images/sector3.webp",
-    },
-];
+/*
+ * Los proyectos llegan del controlador, no se escriben aca.
+ * Formato: Project::toCardPayload() en el modelo.
+ */
+defineProps({
+    proyectos: { type: Array, default: () => [] },
+});
+
+/*
+ * La linea superior de la tarjeta.
+ *
+ * El diseno original decia "Sector Minero", pero la tabla de proyectos no
+ * tiene una columna sector: se usa el subtitulo, que es el campo libre
+ * donde el editor puede escribir justamente eso, y si esta vacio cae al
+ * cliente. Si esa etiqueta va a ser siempre un sector cerrado, conviene
+ * una columna propia en vez de reutilizar el subtitulo.
+ */
+const etiqueta = (proyecto) => proyecto.subtitle || proyecto.client || null;
+
 const onMounted = () => {
     document.fonts?.ready.then(() => splideRef.value?.splide.refresh());
 };
@@ -113,10 +135,22 @@ const onMounted = () => {
     width: 100%;
     min-width: 0;
     .cardProyect {
+        // Ahora es un enlace al detalle, no un div: sin esto hereda el
+        // subrayado y el color de enlace, y no ocupa todo el ancho.
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        height: 100%;
         border-radius: 20px;
         overflow: hidden;
         padding: 1.5rem 1.5rem 3.5rem;
         background: $color-primary-dark;
+        transition: transform 0.25s ease;
+
+        &:hover,
+        &:focus-visible {
+            transform: translateY(-4px);
+        }
         .cardHeader {
             border-radius: 10px;
             overflow: hidden;
@@ -136,7 +170,7 @@ const onMounted = () => {
                 line-height: 1.35em;
                 color: white;
                 font-family: $font-sans;
-                font-weight: 500;
+                font-weight: 600;
 
                 @media screen and (min-width: 992px) {
                     font-size: 1rem;
@@ -152,7 +186,7 @@ const onMounted = () => {
                 line-height: 1.5em;
                 color: $color-secondary;
                 font-family: $font-sans;
-                font-weight: 500;
+                font-weight: 600;
                 margin-bottom: 0.25rem;
                 text-transform: uppercase;
                 @media screen and (min-width: 992px) {

@@ -13,6 +13,12 @@ import Hero from "@/Components/Hero.vue";
 import ContactenosComponent from "@/Components/Contactenos/Index.vue";
 import DatosSection from "@/Components/Home/Datos.vue";
 import ContactoComponent from "@/Components/Share/Contacto.vue";
+
+// Los proyectos llegan del controlador: Project::ultimos(5).
+defineProps({
+    proyectos: { type: Array, default: () => [] },
+});
+
 // Recibir props del controller
 // defineProps({
 //     banners: {

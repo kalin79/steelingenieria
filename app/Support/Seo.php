@@ -25,6 +25,8 @@ class Seo implements Arrayable
 
     private ?string $image = null;
 
+    private ?string $keywords = null;
+
     private ?string $canonical = null;
 
     private bool $indexable = true;
@@ -54,6 +56,23 @@ class Seo implements Arrayable
     public function image(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Palabras clave de la pagina.
+     *
+     * Google dejo de usarlas como factor de posicion en 2009 y no las
+     * mira; Bing les da un peso marginal. Se mantienen porque son la
+     * forma mas simple de dejar declarado, dentro del propio HTML, a que
+     * termino apunta cada pagina: sirve para auditar el sitio y para las
+     * herramientas que si las leen. No reemplazan al titulo ni a la
+     * descripcion, que son las que de verdad mueven la aguja.
+     */
+    public function keywords(?string $keywords): self
+    {
+        $this->keywords = filled($keywords) ? $keywords : null;
 
         return $this;
     }
@@ -99,6 +118,7 @@ class Seo implements Arrayable
             'title' => "{$this->title} | {$siteName}",
             'rawTitle' => $this->title,
             'description' => $this->description,
+            'keywords' => $this->keywords,
             'image' => $this->image ? url($this->image) : null,
             // Sin canonical explicito se usa la URL actual sin parametros,
             // que evita que ?utm_source cree duplicados en el indice.

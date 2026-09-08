@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
+use App\Models\Project;
 use App\Support\JsonLd;
 use App\Support\Seo;
 use Inertia\Inertia;
@@ -31,6 +32,8 @@ class ContactenosController extends Controller
 
         return Inertia::render('Contactenos', [
             'seo' => $seo->toArray(),
+            // Esta pagina monta la misma seccion de proyectos que el home.
+            'proyectos' => Project::ultimos(5),
         ]);
     }
 }

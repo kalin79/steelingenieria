@@ -131,4 +131,33 @@ class JsonLd
                 ->all(),
         ];
     }
+
+    /**
+     * Ficha de un proyecto ejecutado.
+     *
+     * Se usa CreativeWork y no Service: un proyecto es un trabajo ya
+     * entregado, con cliente y fecha, no una prestacion que se ofrece.
+     * Esa distincion es la que permite que un asistente responda "que
+     * obras hizo esta empresa" citando la ficha correcta.
+     */
+    public static function project(
+        string $nombre,
+        ?string $descripcion = null,
+        ?string $imagen = null,
+        ?string $cliente = null,
+        ?string $ejecucion = null,
+        ?string $url = null,
+    ): array {
+        return array_filter([
+            '@context' => 'https://schema.org',
+            '@type' => 'CreativeWork',
+            'name' => $nombre,
+            'description' => $descripcion,
+            'image' => $imagen,
+            'url' => $url,
+            'creator' => ['@id' => url('/').'#organization'],
+            'client' => $cliente,
+            'temporalCoverage' => $ejecucion,
+        ]);
+    }
 }

@@ -7,6 +7,7 @@
 
     $titulo = $seo['title'] ?? config('app.name');
     $descripcion = $seo['description'] ?? null;
+    $keywords = $seo['keywords'] ?? null;
     $canonical = $seo['canonical'] ?? url()->current();
     $imagen = $seo['image'] ?? null;
     $robots = $seo['robots'] ?? 'index, follow';
@@ -32,6 +33,10 @@
 
     @if ($descripcion)
         <meta name="description" content="{{ $descripcion }}">
+    @endif
+
+    @if ($keywords)
+        <meta name="keywords" content="{{ $keywords }}">
     @endif
 
     <link rel="canonical" href="{{ $canonical }}">
