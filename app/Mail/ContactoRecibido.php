@@ -13,15 +13,26 @@ class ContactoRecibido extends Mailable
 {
     use Queueable, SerializesModels;
 
+    /**
+     * @param  array<string, mixed>  $datos  Solo trae los campos que el
+     *                                       formulario de origen envio.
+     * @param  string  $origen  Etiqueta del formulario. Antes se leia de
+     *                          $datos['solucion'], pero no todos los
+     *                          formularios tienen ese campo: la landing de
+     *                          TENTE, por ejemplo, deduce el origen de la
+     *                          ruta. Pasarlo explicito evita que el correo
+     *                          reviente con un indice indefinido.
+     */
     public function __construct(
         public array $datos,
         public ?string $ip = null,
+        public string $origen = 'Formulario web',
     ) {}
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "Nueva consulta web: {$this->datos['solucion']}",
+            subject: "Nueva consulta web: {$this->origen}",
 
             /*
              * El remitente es SIEMPRE una direccion del propio dominio.

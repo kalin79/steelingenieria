@@ -287,7 +287,7 @@ const navItems = [
     {
         label: "Soluciones de Movilidad con TENTE®",
         lines: ["Soluciones de Movilidad", "con TENTE®"],
-        href: "/soluciones/tente/supermercados",
+        href: "/soluciones/tente/soluciones-de-movilidad-con-tente",
     },
     { label: "Proyectos", lines: ["Proyectos"], href: "/proyectos" },
     { label: "Contáctenos", lines: ["Contáctenos"], href: "/contactenos" },

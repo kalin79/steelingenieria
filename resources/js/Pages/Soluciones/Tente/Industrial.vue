@@ -12,10 +12,10 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Hero from "@/Components/Hero.vue";
-import ContactoComponent from "@/Components/Share/Atencion.vue";
+import ContactoComponent from "@/Components/Share/ContactoTente.vue";
 import DescripcionComponent from "@/Components/Tente/Descripcion.vue";
 import TenteComponent from "@/Components/Share/Tente.vue";
-import SeparateComponent from "@/Components/Share/Separate.vue";
+// import SeparateComponent from "@/Components/Share/Separate.vue";
 import LineasComponent from "@/Components/Share/Tente/Lineas.vue";
 // import GaleriaComponent from "@/Components/Share/MasterMover/Galeria.vue";
 const banners = [

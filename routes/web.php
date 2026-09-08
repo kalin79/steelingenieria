@@ -4,16 +4,27 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Pages\MasterMoverController;
 use App\Http\Controllers\Pages\TenteController;
+use App\Http\Controllers\Pages\ContactenosController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\ContactoTenteController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/contactenos', [ContactenosController::class, 'index'])->name('contactenos');
 
 
 
 Route::post('/contacto', [ContactoController::class, 'store'])
     ->middleware('throttle:5,1')
     ->name('contacto.store');
+
+// Formulario de la landing TENTE: mismos datos personales, sin el campo
+// "solucion". Ruta propia para que cada formulario tenga su FormRequest y
+// su propio limite de envios, en vez de reglas condicionales en uno solo.
+Route::post('/contacto/tente', [ContactoTenteController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('contacto.tente.store');
 
 
 Route::prefix('soluciones')->name('solutions.')->group(function () {
@@ -28,6 +39,7 @@ Route::prefix('soluciones')->name('solutions.')->group(function () {
     });
 
     Route::prefix('tente')->name('tente.')->group(function () {
+        Route::get('/soluciones-de-movilidad-con-tente', [TenteController::class, 'index'])->name('tente.index');
         Route::get('/supermercados', [TenteController::class, 'supermercados'])->name('supermercados');
         Route::get('/industrial', [TenteController::class, 'industrial'])->name('industrial');
         Route::get('/medico', [TenteController::class, 'medico'])->name('medico');

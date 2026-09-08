@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 use Inertia\Inertia;
 class TenteController extends Controller
 {
+    public function index()
+    {
+        return Inertia::render('Soluciones/Tente/Index');
+    }
     public function supermercados()
     {
         return Inertia::render('Soluciones/Tente/SuperMercado');

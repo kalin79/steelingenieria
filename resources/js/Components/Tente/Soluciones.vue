@@ -5,64 +5,20 @@
             <div class="layoutContainer">
                 <div>
                     <div class="etiquetaContainer">
-                        <span>Arrastradores Eléctricos</span>
+                        <span>Soluciones de Movilidad</span>
                     </div>
-                    <h2>Descubra un manejo de materiales más seguro</h2>
+                    <h2>Movemos la industria con soluciones de ingeniería</h2>
                     <p>
-                        Los remolcadores eléctricos ofrecen un movimiento seguro
-                        y controlado de cargas pesadas con ruedas. Gracias a su
-                        diseño compacto y a que no requieren licencia para su
-                        operación, eliminan la manipulación manual, protegen a
-                        los operadores y mejoran la eficiencia operativa.
+                        En STEEL Soluciones de Ingeniería, trabajamos para optimizar el movimiento, la seguridad y la eficiencia de los procesos industriales. Como representantes oficiales de TENTE, ponemos a disposición del mercado soluciones de movilidad diseñadas para responder a las más altas exigencias de la industria.
+                    </p>
+                    <p>
+                        TENTE cuenta con más de 100 años desarrollando ruedas y sistemas de movilidad que combinan innovación, resistencia, diseño y alto rendimiento. Sus soluciones permiten mejorar la maniobrabilidad de equipos, optimizar operaciones y brindar mayor seguridad en diferentes entornos de trabajo.
+                    </p>
+                    <p>
+                        A través de STEEL, nuestros clientes acceden a productos TENTE y a un acompañamiento especializado para encontrar la solución adecuada según las necesidades de cada operación. No se trata solo de mover una carga, sino de hacerlo de manera más eficiente, segura y confiable.
                     </p>
                     <div class="bgM"></div>
-                    <div class="accordionContainer">
-                        <div class="accordion">
-                            <div
-                                v-for="(item, index) in items"
-                                :key="index"
-                                class="accordion__item"
-                                :class="{
-                                    'accordion__item--open':
-                                        openIndex === index,
-                                }"
-                            >
-                                <button
-                                    class="accordion__header"
-                                    @click="toggleItem(index)"
-                                    :aria-expanded="openIndex === index"
-                                    :aria-controls="`accordion-content-${index}`"
-                                >
-                                    <span class="accordion__title">{{
-                                        item.title
-                                    }}</span>
-                                    <svg
-                                        class="accordion__icon"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                    >
-                                        <polyline
-                                            points="6 9 12 15 18 9"
-                                        ></polyline>
-                                    </svg>
-                                </button>
-
-                                <div
-                                    :id="`accordion-content-${index}`"
-                                    class="accordion__content"
-                                    :ref="`content-${index}`"
-                                >
-                                    <div class="accordion__body">
-                                        {{ item.content }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -140,7 +96,7 @@ const closeItem = (index) => {
     background-repeat: repeat;
     position: relative;
     .bg {
-        background-image: url("/images/f3.webp");
+        background-image: url("/images/f5.png");
         background-position: 0 0;
         background-size: cover;
         background-repeat: no-repeat;
@@ -156,7 +112,7 @@ const closeItem = (index) => {
         }
     }
     .bgM {
-        background-image: url("/images/f3.webp");
+        background-image: url("/images/f5M.png");
         background-position: 0 0;
         background-size: cover;
         background-repeat: no-repeat;

@@ -154,7 +154,7 @@ const columnas = [
                 label: "Arrastradores Eléctricos MASTERMOVER",
                 href: "/soluciones/master-mover/soluciones-de-arrastre",
             },
-            { label: "Ruedas TENTE", href: "/soluciones/tente/supermercados" },
+            { label: "Ruedas TENTE", href: "/soluciones/tente/soluciones-de-movilidad-con-tente" },
         ],
     },
 ];
