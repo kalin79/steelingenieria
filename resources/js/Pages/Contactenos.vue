@@ -30,13 +30,13 @@ defineProps({
 const banners = [
     {
         id: 1,
-        image: "/images/hero2.webp",
-        imageM: "/images/bm.webp",
-        title: "Soluciones <br />Industriales",
-        subtitle: "Soluciones digitales innovadoras",
-        description: `Diseño, fabricación y montaje de proyectos industriales para <br />los sectores minero, logístico, manufacturero y alimentario.`,
-        boton: `SOLICITA UNA COTIZACIÓN`,
-        link: `/contacto`,
+        image: "/images/contacto.png",
+        imageM: "/images/contactoM.png",
+        title: "Contáctenos",
+        subtitle: "Construyamos juntos una solución para <br />tu proyecto",
+        description: ``,
+        boton: ``,
+        link: ``,
     },
 ];
 const statsData = [

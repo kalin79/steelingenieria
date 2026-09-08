@@ -1,6 +1,6 @@
 <template>
     <AppLayout>
-        <Hero :slides="banners" />
+        <Hero :slides="slidesHero" />
         <DatosSection :stats="statsData" />
         <SomosSection />
         <ServiciosSection />
@@ -11,6 +11,7 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import AppLayout from "@/Layouts/AppLayout.vue";
 import Hero from "@/Components/Hero.vue";
 import DatosSection from "@/Components/Home/Datos.vue";
@@ -20,20 +21,27 @@ import SociosSection from "@/Components/Home/Socios.vue";
 import ProyectosSection from "@/Components/Home/Proyectos.vue";
 import ContactoComponent from "@/Components/Share/Contacto.vue";
 
-// Los proyectos llegan del controlador: Project::ultimos(5).
-defineProps({
+/*
+ * Datos que llegan del controlador:
+ *   banners   -> Banner::paraHero('home')
+ *   proyectos -> Project::ultimos(5)
+ */
+const props = defineProps({
+    banners: { type: Array, default: () => [] },
     proyectos: { type: Array, default: () => [] },
 });
 
-// Recibir props del controller
-// defineProps({
-//     banners: {
-//         type: Array,
-//         default: () => [],
-//     },
-// });
-// Datos hardcodeados por ahora
-const banners = [
+/*
+ * Respaldo mientras no haya banners cargados en el panel con la
+ * agrupacion "home".
+ *
+ * Hero declara un default en su prop, pero un default solo actua cuando
+ * la prop NO se pasa: al recibir un arreglo vacio no se activa y el
+ * carrusel queda en blanco. Como el hero es lo primero que se ve del
+ * sitio, la decision se toma aca y no dentro de Hero, que lo comparten
+ * otras catorce paginas.
+ */
+const bannersPorDefecto = [
     {
         id: 1,
         image: "/images/hero2.webp",
@@ -45,6 +53,11 @@ const banners = [
         link: `/contacto`,
     },
 ];
+
+const slidesHero = computed(() =>
+    props.banners.length ? props.banners : bannersPorDefecto,
+);
+
 const statsData = [
     {
         id: 1,

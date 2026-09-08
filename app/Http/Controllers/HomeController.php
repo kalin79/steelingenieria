@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 // use Illuminate\Http\Request;
+use App\Models\Banner;
 use App\Models\Project;
 use App\Support\JsonLd;
 use App\Support\Seo;
@@ -37,6 +38,8 @@ class HomeController extends Controller
         // return Inertia::render('Home');
         return Inertia::render('Home', [
             'seo' => $seo->toArray(),
+            // Banners cargados desde el panel con la agrupacion "home".
+            'banners' => Banner::paraHero('home'),
             // Los 5 ultimos proyectos dados de alta, para el carrusel.
             'proyectos' => Project::ultimos(5),
         ]);

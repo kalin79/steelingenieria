@@ -22,6 +22,23 @@ class FooterBlockResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
+    /**
+     * Oculto del menu lateral.
+     *
+     * Solo saca el enlace de la navegacion: la ruta del recurso sigue
+     * viva, asi que /admin/... entrando a mano continua funcionando para
+     * quien conozca la direccion. Es lo correcto para modulos que se
+     * configuran una vez y no se tocan a diario, sin perder la puerta de
+     * atras para mantenimiento.
+     *
+     * Si lo que hace falta es BLOQUEAR el acceso y no solo esconderlo,
+     * el metodo es canAccess(): return false.
+     */
+    public static function shouldRegisterNavigation(): bool
+    {
+        return false;
+    }
+
     public static function form(Schema $schema): Schema
     {
         return FooterBlockForm::configure($schema);

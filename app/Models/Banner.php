@@ -69,6 +69,64 @@ class Banner extends Model
         ];
     }
 
+    /**
+     * Estructura que consume el componente Hero.vue.
+     *
+     * Es distinta de toPayload() a proposito: Hero ya existe, ya funciona
+     * en catorce paginas y espera claves planas (image, imageM, boton).
+     * Adaptar el backend al componente cuesta este metodo; adaptar el
+     * componente al backend obligaria a tocar las catorce paginas y a
+     * revisar cada una. Se elige lo primero.
+     *
+     * Dos detalles que no son cosmeticos:
+     *
+     * - link y boton salen como cadena vacia y nunca como null. Hero
+     *   decide si dibuja el boton con `slide.link != ''`, y en JavaScript
+     *   `null != ''` da true: con null el boton aparece igual, apuntando
+     *   a ninguna parte.
+     *
+     * - imageM cae a la imagen de escritorio si no se cargo la version
+     *   movil. Hero interpola `${slide.imageM}?format=webp`, asi que un
+     *   null ahi genera la URL literal "null?format=webp" y la imagen
+     *   queda rota en telefonos.
+     */
+    public function toHeroPayload(): array
+    {
+        $escritorio = $this->imageDesktopMedia?->url;
+        $movil = $this->imageMobileMedia?->url;
+
+        return [
+            'id' => $this->id,
+            'image' => $escritorio ?? $movil,
+            'imageM' => $movil ?? $escritorio,
+            'title' => $this->title,
+            'subtitle' => $this->subtitle ?? '',
+            'description' => $this->description ?? '',
+            'boton' => $this->button_label ?? '',
+            'link' => $this->link ?? '',
+        ];
+    }
+
+    /**
+     * Banners de una agrupacion listos para Hero.vue.
+     *
+     * Descarta los que no tienen ninguna imagen: un slide sin imagen se
+     * ve como un bloque en blanco a pantalla completa, peor que no estar.
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    public static function paraHero(string $collection): array
+    {
+        return static::query()
+            ->active($collection)
+            ->get()
+            ->filter(fn (self $banner) => filled($banner->imageDesktopMedia?->url)
+                || filled($banner->imageMobileMedia?->url))
+            ->map->toHeroPayload()
+            ->values()
+            ->all();
+    }
+
     private function mediaPayload(?Media $media): ?array
     {
         if (! $media) {
