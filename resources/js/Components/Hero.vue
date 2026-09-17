@@ -52,7 +52,7 @@ const options = {
 </script>
 
 <template>
-    <section class="sliderContainerHero">
+    <section class="sliderContainerHero2">
         <Splide :options="options" class="itemContainer">
             <SplideSlide
                 v-for="(slide, index) in slides"
@@ -117,7 +117,7 @@ const options = {
     </section>
 </template>
 <style lang="scss">
-.sliderContainerHero {
+.sliderContainerHero2 {
     .splide__track {
         height: 100%;
     }
@@ -223,7 +223,7 @@ const options = {
 // aspect-ratio: 3 / 2;    // Fotos
 // aspect-ratio: 1 / 1;    // Cuadrado
 // aspect-ratio: 9 / 16;   // Vertical (mobile)
-.sliderContainerHero {
+.sliderContainerHero2 {
     position: relative;
     width: 100%;
     height: 700px;

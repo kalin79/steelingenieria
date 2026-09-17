@@ -7,10 +7,17 @@ use App\Http\Controllers\Pages\TenteController;
 use App\Http\Controllers\Pages\ContactenosController;
 use App\Http\Controllers\Pages\ProyectoController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\ContactoTenteController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Sitemap y robots generados por la aplicacion. Para que estas rutas se
+// usen, public/robots.txt NO debe existir: un archivo fisico en public/
+// lo sirve el servidor web antes de que la peticion llegue a Laravel.
+Route::get('/sitemap.xml', [SitemapController::class, 'sitemap'])->name('sitemap');
+Route::get('/robots.txt', [SitemapController::class, 'robots'])->name('robots');
 
 Route::get('/contactenos', [ContactenosController::class, 'index'])->name('contactenos');
 

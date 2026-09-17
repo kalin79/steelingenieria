@@ -22,7 +22,7 @@
                         <img :src="product.imagen" />
                     </div>
                     <div class="bodyCard">
-                        <h3 v-html="product.subtitulo"></h3>
+                        <!-- <h3 v-html="product.subtitulo"></h3> -->
                         <h2 v-html="product.titulo"></h2>
                     </div>
                     <div class="footerCard">
@@ -107,17 +107,19 @@ const props = defineProps({
                     }
                 }
                 h2 {
-                    font-size: 1.875rem;
+                    font-size: 1.35rem;
                     line-height: 1em;
-                    color: white;
+                    // color: white;
+                    color: $color-secondary;
                     font-family: $font-sans;
                     font-weight: 400;
+                    text-align: center;
                     @media screen and (min-width: 992px) {
-                        font-size: 1.875rem;
+                        font-size: 1.25rem;
                         line-height: 1em;
                     }
                     @media screen and (min-width: 1200px) {
-                        font-size: 1.875rem;
+                        font-size: 1.25rem;
                         line-height: 1em;
                     }
                 }
@@ -140,7 +142,7 @@ const props = defineProps({
                         h5 {
                             font-size: 1rem;
                             line-height: 1.5em;
-                            color: #878787;
+                            color: #1A1A1A;
                             font-family: $font-sans;
                             font-weight: 400;
                             @media screen and (min-width: 992px) {
@@ -160,7 +162,7 @@ const props = defineProps({
                             line-height: 1.5em;
                             color: $color-text-light;
                             font-family: $font-sans;
-                            font-weight: 400;
+                            font-weight: 600;
                             @media screen and (min-width: 992px) {
                                 font-size: 1rem;
                                 line-height: 1.5em;

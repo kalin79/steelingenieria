@@ -46,115 +46,155 @@ const Lineas = {
         {
             imagen: `/images/t37.png`,
             subtitulo: `SERIE ALPHA`,
-            titulo: `Rueda giratoria con Freno total 160 mm`,
+            titulo: `Serie ALPHA - 3470`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>Poliuretano</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100 - 350 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `160 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-40/+80 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `350 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `108 -240 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `80 - 200 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t38.png`,
             subtitulo: `SERIE ALPHA`,
-            titulo: `Rueda fija 100 mm`,
+            titulo: `Serie ALPHA - 8470`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `230 - 500 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `100 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-30/+180 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `200 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `161 -195 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `125 - 150 mm`,
                 },
                 {
                     titulo: `Soporte`,
-                    descripcion: `Fijo`,
+                    descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t39.png`,
             subtitulo: `SERIE ALPHA STAINLESS`,
-            titulo: `Rueda giratoria  80 mm`,
+            titulo: `Serie ALPHA - 3470`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>Plástico resistente</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100 - 150 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `80 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-40/+280 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `100 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `108 -128 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `80 - 100 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t40.png`,
             subtitulo: `SERIE ALPHA STAINLESS`,
-            titulo: `Rueda giratoria  160 mm`,
+            titulo: `Serie ALPHA inox- 8470`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>Neumático elástico</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `160 - 400 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `160 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+80 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `300 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `128 -240 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 200 mm`,
                 },
                 {
                     titulo: `Soporte`,
-                    descripcion: `Giratorio`,
+                    descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t41.png`,
             subtitulo: `SERIE DURATECH HEAT`,
-            titulo: `Aro 100 mm`,
+            titulo: `Serie ALPHA - 3470`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>Plástico resistente</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `200 - 250 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `100 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-40/+80 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `250 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: ``,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `80 - 100 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },

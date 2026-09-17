@@ -80,6 +80,14 @@
 
                        
                     </aside>
+                    <div class="botonContainerMovil">
+                        <Link href="/proyectos">
+                            <div class="centerFlex">
+                            <img src="/images/btn2.png" />
+                            <span>VER MÁS PROYECTOS</span>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
 
                 <!-- <section v-if="relacionados.length" class="proyectoDetalle__relacionados">
@@ -164,12 +172,15 @@ const statsData = [
 <style lang="scss" scoped>
 .proyectoDetalle {
     padding: 6rem 0 0 0;
-    .botonContainer{
+    
+    .botonContainer,
+    .botonContainerMovil{
         margin-top: 4rem;
         margin-bottom: 1.5rem;
-
+        display: none;
         @media screen and (min-width: 992px){
             margin-bottom: 0;
+            display: block
         }
         a {
             width: 100%;
@@ -216,6 +227,14 @@ const statsData = [
                     line-height: 1.5em;
                 }
             }
+        }
+    }
+
+    .botonContainerMovil{
+        display: block;
+        margin-top: 1.5rem;
+        @media screen and (min-width: 992px){
+            display: none;
         }
     }
     &__banner {

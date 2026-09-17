@@ -46,108 +46,124 @@ const Lineas = {
         {
             imagen: `/images/t1.png`,
             subtitulo: `SERIE STORA`,
-            titulo: `Rueda giratoria con Freno de rueda 125 mm`,
+            titulo: `Serie STORA - 2875`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>QMP</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `60 - 100  KG`,
                 },
                 {
-                    titulo: `Diámetro`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+60 C°`,
+                },
+                {
+                    titulo: `Altura total`,
+                    descripcion: `144 - 153 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
                     descripcion: `125 mm`,
                 },
                 {
-                    titulo: `Fijación`,
-                    descripcion: `P30 - 13`,
-                },
-                {
-                    titulo: `Capacidad`,
-                    descripcion: `80 KG.`,
-                },
-                {
                     titulo: `Soporte`,
-                    descripcion: `Fijo y giratorio`,
+                    descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t2.png`,
             subtitulo: `SERIE STORA`,
-            titulo: `Rueda giratoria 125 mm`,
+            titulo: `Serie STORA - 2370`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>QMP</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `80 - 100  KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `125 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+60 C°`,
                 },
                 {
-                    titulo: `Fijación`,
-                    descripcion: `P30 - 13`,
+                    titulo: `Altura total`,
+                    descripcion: `129 - 155 mm`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `100 KG.`,
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 155 mm`,
                 },
                 {
                     titulo: `Soporte`,
-                    descripcion: `Fijo y giratorio`,
+                    descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t3.png`,
             subtitulo: `SERIE LEVINA`,
-            titulo: `Rueda giratoria 125 mm`,
+            titulo: `Serie LEVINA - 5845`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>QAP</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `60 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+60 C°`,
+                },
+                {
+                    titulo: `Altura total`,
+                    descripcion: `155 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
                     descripcion: `125 mm`,
-                },
-                {
-                    titulo: `Fijación`,
-                    descripcion: `P30 - 13`,
-                },
-                {
-                    titulo: `Capacidad`,
-                    descripcion: `60 KG.`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t4.png`,
             subtitulo: `SERIE LEVINA`,
-            titulo: `Rueda giratoria  100 mm`,
+            titulo: `Serie LEVINA - 5370`,
             items: [
                 {
-                    titulo: `Modelo`,
-                    descripcion: `<span>PJP</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `125 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-10/+40 C°`,
                 },
                 {
-                    titulo: `Fijación`,
-                    descripcion: `P30 - 13`,
+                    titulo: `Altura total`,
+                    descripcion: `137 - 190 mm`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `100 KG.`,
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 150 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },

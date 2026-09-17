@@ -58,7 +58,17 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'engine' => null,
+            /*
+             * Motor explicito.
+             *
+             * Con null se usa el motor por defecto del servidor, y varios
+             * hostings compartidos todavia tienen MyISAM: ahi las claves
+             * foraneas se ignoran en silencio y el limite de indice es de
+             * 1000 bytes, insuficiente para los indices con columnas
+             * varchar utf8mb4. ROW_FORMAT=DYNAMIC sube el limite de
+             * prefijo de columna de 767 a 3072 bytes en InnoDB.
+             */
+            'engine' => env('DB_ENGINE', 'InnoDB ROW_FORMAT=DYNAMIC'),
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
@@ -78,7 +88,7 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
-            'engine' => null,
+            'engine' => env('DB_ENGINE', 'InnoDB ROW_FORMAT=DYNAMIC'),
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 Mysql::ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],

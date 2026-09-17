@@ -32,45 +32,45 @@
     <title>{{ $titulo }}</title>
 
     @if ($descripcion)
-        <meta name="description" content="{{ $descripcion }}">
+        <meta data-inertia="description" name="description" content="{{ $descripcion }}">
     @endif
 
     @if ($keywords)
-        <meta name="keywords" content="{{ $keywords }}">
+        <meta data-inertia="keywords" name="keywords" content="{{ $keywords }}">
     @endif
 
-    <link rel="canonical" href="{{ $canonical }}">
-    <meta name="robots" content="{{ $robots }}">
+    <link data-inertia="canonical" rel="canonical" href="{{ $canonical }}">
+    <meta data-inertia="robots" name="robots" content="{{ $robots }}">
 
     {{-- ============ OPEN GRAPH ============ --}}
     {{-- Lo que se ve al compartir el enlace en WhatsApp, LinkedIn y
          Facebook. Sin esto el enlace aparece pelado y baja el clic. --}}
-    <meta property="og:type" content="{{ $tipo }}">
-    <meta property="og:site_name" content="{{ $nombreSitio }}">
-    <meta property="og:title" content="{{ $titulo }}">
-    <meta property="og:url" content="{{ $canonical }}">
-    <meta property="og:locale" content="{{ $seo['locale'] ?? 'es_PE' }}">
+    <meta data-inertia="og:type" property="og:type" content="{{ $tipo }}">
+    <meta data-inertia="og:site_name" property="og:site_name" content="{{ $nombreSitio }}">
+    <meta data-inertia="og:title" property="og:title" content="{{ $titulo }}">
+    <meta data-inertia="og:url" property="og:url" content="{{ $canonical }}">
+    <meta data-inertia="og:locale" property="og:locale" content="{{ $seo['locale'] ?? 'es_PE' }}">
 
     @if ($descripcion)
-        <meta property="og:description" content="{{ $descripcion }}">
+        <meta data-inertia="og:description" property="og:description" content="{{ $descripcion }}">
     @endif
 
     @if ($imagen)
-        <meta property="og:image" content="{{ $imagen }}">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
+        <meta data-inertia="og:image" property="og:image" content="{{ $imagen }}">
+        <meta data-inertia="og:image:width" property="og:image:width" content="1200">
+        <meta data-inertia="og:image:height" property="og:image:height" content="630">
     @endif
 
     {{-- ============ TWITTER / X ============ --}}
-    <meta name="twitter:card" content="{{ $imagen ? 'summary_large_image' : 'summary' }}">
-    <meta name="twitter:title" content="{{ $titulo }}">
+    <meta data-inertia="twitter:card" name="twitter:card" content="{{ $imagen ? 'summary_large_image' : 'summary' }}">
+    <meta data-inertia="twitter:title" name="twitter:title" content="{{ $titulo }}">
 
     @if ($descripcion)
-        <meta name="twitter:description" content="{{ $descripcion }}">
+        <meta data-inertia="twitter:description" name="twitter:description" content="{{ $descripcion }}">
     @endif
 
     @if ($imagen)
-        <meta name="twitter:image" content="{{ $imagen }}">
+        <meta data-inertia="twitter:image" name="twitter:image" content="{{ $imagen }}">
     @endif
 
     {{-- ============ DATOS ESTRUCTURADOS ============ --}}

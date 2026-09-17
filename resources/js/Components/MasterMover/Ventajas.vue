@@ -34,28 +34,34 @@ const ventajas = [
         image: `/images/icon1.svg`,
     },
     {
+        id: 6,
+        title: `Maximice la eficiencia`,
+        description: `Impulse la productividad y optimice la eficiencia operativa de su equipo de trabajo.`,
+        image: `/images/icon2.svg`,
+    },
+    {
         id: 2,
-        title: `Mejore la seguridad`,
-        description: `Elimine la manipulación manual de cargas y reduzca la dependencia de grúas y montacargas.`,
+        title: `Control inigualable`,
+        description: `Obtenga el máximo control de las maniobras con un solo operador.`,
         image: `/images/icon3.svg`,
     },
     {
         id: 3,
-        title: `Mejore la seguridad`,
-        description: `Elimine la manipulación manual de cargas y reduzca la dependencia de grúas y montacargas.`,
-        image: `/images/icon3.svg`,
-    },
-    {
-        id: 4,
-        title: `Mejore la seguridad`,
-        description: `Elimine la manipulación manual de cargas y reduzca la dependencia de grúas y montacargas.`,
+        title: `Cero emisiones`,
+        description: `Contribuya a la sostenibilidad y al cumplimiento de los objetivos de reducción de emisiones de carbono.`,
         image: `/images/icon4.svg`,
     },
     {
-        id: 5,
-        title: `Mejore la seguridad`,
-        description: `Elimine la manipulación manual de cargas y reduzca la dependencia de grúas y montacargas.`,
+        id: 4,
+        title: `Máxima maniobrabilidad`,
+        description: `Empuje, arrastre y maniobre cargas con facilidad, incluso en espacios reducidos.`,
         image: `/images/icon5.svg`,
+    },
+    {
+        id: 5,
+        title: `Gran capacidad de carga`,
+        description: `Mueva cargas de hasta 70.000 kg o más con total confianza.`,
+        image: `/images/icon6.svg`,
     },
 ];
 </script>
@@ -136,7 +142,7 @@ const ventajas = [
                 flex: 0 0 82px;
                 img {
                     width: 100%;
-                    height: auto;
+                    height: 82px;
                     object-fit: contain;
                 }
             }

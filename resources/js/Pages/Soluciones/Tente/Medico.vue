@@ -46,299 +46,434 @@ const Lineas = {
         {
             imagen: `/images/t24.png`,
             subtitulo: `SERIE INTEGRAL`,
-            titulo: `Rueda giratoria 125 mm`,
+            titulo: `Serie INTEGRAL`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `150 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `125 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-30/+80 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `150 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `158 - 229 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `125 - 200 mm`,
                 },
                 {
                     titulo: `Soporte`,
-                    descripcion: `Giratorio`,
+                    descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t25.png`,
             subtitulo: `SERIE INTEGRAL`,
-            titulo: `Rueda giratoria con central, Freno total 125 mm`,
+            titulo: `Serie INTEGRAL`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `150 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `125 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-30/+80 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `150 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `158 - 229 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `125 - 200 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t26.png`,
             subtitulo: `SERIE INTEGRAL TWIN`,
-            titulo: `Rueda giratoria con central, Freno total 100 mm`,
+            titulo: `Serie INTEGRAL Twin`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `125-150 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `100 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-30/+80 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `125 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `150 - 175 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `125 - 150 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t27.png`,
             subtitulo: `SERIE INTEGRAL TWIN`,
-            titulo: `Rueda giratoria con central, Freno total 150 mm`,
+            titulo: `Serie INTEGRAL Twin`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `125-150 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `150 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-30/+80 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `150 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `150 - 175 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `125 - 150 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t28.png`,
             subtitulo: `SERIE LUMINA`,
-            titulo: `Rueda giratoria con Freno de rueda 50 mm`,
+            titulo: `Serie LUMINA`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Polipropileno</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `40 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+60 C°`,
+                },
+                {
+                    titulo: `Altura total`,
+                    descripcion: `56 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
                     descripcion: `50 mm`,
-                },
-                {
-                    titulo: `Capacidad`,
-                    descripcion: `80 KG.`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t29.png`,
             subtitulo: `SERIE LUMINA`,
-            titulo: `Rueda giratoria  50 mm`,
+            titulo: `Serie LUMINA`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Polipropileno</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `40 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+60 C°`,
+                },
+                {
+                    titulo: `Altura total`,
+                    descripcion: `56 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
                     descripcion: `50 mm`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `80 KG.`,
+                    titulo: `Soporte`,
+                    descripcion: `Giratorio`,
                 },
                 {
-                    titulo: `Soporte`,
-                    descripcion: `Giratorio con freno`,
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t30.png`,
             subtitulo: `SERIE LUMINA`,
-            titulo: `Rueda giratoria  50 mm`,
+            titulo: `Serie LUMINA`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `40 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `100 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+60 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `125 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `71.5 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `50 mm`,
                 },
                 {
                     titulo: `Soporte`,
-                    descripcion: `Giratorio con freno`,
+                    descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t31.png`,
             subtitulo: `LÍNEA LIGHT`,
-            titulo: `Rueda giratoria con Freno de rueda 75 mm`,
+            titulo: `Serie LÍNEA - 5940`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100-110 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `75 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-10/+40 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `70 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `124-148 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 125 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t32.png`,
             subtitulo: `LÍNEA LIGHT`,
-            titulo: `Rueda giratoria  65 mm`,
+            titulo: `Serie LÍNEA LIGHT - 5920`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Polipropileno</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `50-60 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `65 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-20/+60 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `50 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `55,5-85,5 mm`,
                 },
                 {
-                    titulo: `Soporte`,
-                    descripcion: `Giratorio`,
-                },
-            ],
-        },
-        {
-            imagen: `/images/t32.png`,
-            subtitulo: `SERIE LEVINA`,
-            titulo: `Rueda giratoria con Freno total 150 mm`,
-            items: [
-                {
-                    titulo: `Material`,
-                    descripcion: `<span>Polipropileno</span>`,
-                },
-                {
-                    titulo: `Diámetro`,
-                    descripcion: `150 mm`,
-                },
-                {
-                    titulo: `Capacidad`,
-                    descripcion: `100 KG.`,
+                    titulo: `Diametro de rueda`,
+                    descripcion: `50 - 75 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
                 },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
+                },
             ],
         },
+        // {
+        //     imagen: `/images/t32.png`,
+        //     subtitulo: `SERIE LEVINA`,
+        //     titulo: `Serie LEVINA - 5370`,
+        //     items: [
+        //         {
+        //             titulo: `Capacidad de carga`,
+        //             descripcion: `100 KG`,
+        //         },
+        //         {
+        //             titulo: `Temperatura`,
+        //             descripcion: `-10/+40 C°`,
+        //         },
+        //         {
+        //             titulo: `Altura total`,
+        //             descripcion: `137-190 mm`,
+        //         },
+        //         {
+        //             titulo: `Diametro de rueda`,
+        //             descripcion: `100 - 150 mm`,
+        //         },
+        //         {
+        //             titulo: `Soporte`,
+        //             descripcion: `Giratorio y con freno`,
+        //         },
+        //         {
+        //             titulo: `Fijación`,
+        //             descripcion: ``,
+        //         },
+        //     ],
+        // },
         {
             imagen: `/images/t33.png`,
             subtitulo: `SERIE LEVINA`,
-            titulo: `Rueda giratoria Rueda 100 mm`,
+            titulo: `Serie LEVINA - 5370`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `100 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-10/+40 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `100 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `137-190 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 150 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t34.png`,
             subtitulo: `SERIE LEVINA`,
-            titulo: `Rueda giratoria Rueda 100 mm`,
+            titulo: `Serie LEVINA - 5370`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `100 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-10/+40 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `100 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `137-190 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 150 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },
         {
             imagen: `/images/t35.png`,
             subtitulo: `SERIE LEVINA`,
-            titulo: `Rueda giratoria con Freno total 150 mm`,
+            titulo: `Serie LEVINA - 5370`,
             items: [
                 {
-                    titulo: `Material`,
-                    descripcion: `<span>Poliamida</span>`,
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100 KG`,
                 },
                 {
-                    titulo: `Diámetro`,
-                    descripcion: `150 mm`,
+                    titulo: `Temperatura`,
+                    descripcion: `-10/+40 C°`,
                 },
                 {
-                    titulo: `Capacidad`,
-                    descripcion: `100 KG.`,
+                    titulo: `Altura total`,
+                    descripcion: `137-190 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 150 mm`,
                 },
                 {
                     titulo: `Soporte`,
                     descripcion: `Giratorio con freno`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
+                },
+            ],
+        },
+        {
+            imagen: `/images/t33.png`,
+            subtitulo: `SERIE LEVINA`,
+            titulo: `Serie LEVINA - 5370`,
+            items: [
+                {
+                    titulo: `Capacidad de carga`,
+                    descripcion: `100 KG`,
+                },
+                {
+                    titulo: `Temperatura`,
+                    descripcion: `-10/+40 C°`,
+                },
+                {
+                    titulo: `Altura total`,
+                    descripcion: `137-190 mm`,
+                },
+                {
+                    titulo: `Diametro de rueda`,
+                    descripcion: `100 - 150 mm`,
+                },
+                {
+                    titulo: `Soporte`,
+                    descripcion: `Giratorio`,
+                },
+                {
+                    titulo: `Fijación`,
+                    descripcion: ``,
                 },
             ],
         },

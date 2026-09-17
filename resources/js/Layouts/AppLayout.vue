@@ -1,4 +1,6 @@
 <template>
+    <SeoHead />
+
     <div class="app-wrapper">
         <Header />
 
@@ -11,6 +13,7 @@
 </template>
 
 <script setup>
+import SeoHead from "@/Components/SeoHead.vue";
 import Header from "@/Components/Header.vue";
 import Footer from "@/Components/Footer.vue";
 </script>
